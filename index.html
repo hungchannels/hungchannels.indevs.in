@@ -54,10 +54,10 @@
     <link rel="icon" href="./hchannels-img/avt.png" />
 </head>
 
-<body>
+<body onclick="audio.play()">
     <div class="video-background">
-        <video autoplay loop playsinline class="video">
-            <source src="./hchannels-img/Genshin Impact Edit - BRODYAGA FUNK [AMV-EDIT] 4k.mp4"
+        <video autoplay loop muted playsinline class="video">
+            <source src="./hchannels-img/What Will Happen When it's the First Time at Girlfriend's House_.mp4"
                 type="video/mp4">
         </video>
     </div>
@@ -72,6 +72,31 @@
             const videoElement = document.querySelector('.video');
             videoElement.play();
         });
+    </script>
+
+    <script>
+        const HungChannels_List = [
+            "./hungchannels/Sped Up Mage, Syrex - Safe and Sound (Sped Up).mp3",
+            "./hungchannels/Sped Up Mage, Syrex - Tokyo Drift (Sped Up).mp3",
+            "./hungchannels/Syrex - Apologize (Nightcore).mp3",
+            "./hungchannels/Syrex - Don't Stop The Music (Nightcore).mp3",
+            "./hungchannels/Syrex - Dragostea Din Tei (Nightcore).mp3",
+            "./hungchannels/Syrex - Havana (Nightcore).mp3",
+            "./hungchannels/Syrex - I Need Your Love (Nightcore).mp3",
+            "./hungchannels/Syrex - In The Name Of Love (Nightcore).mp3",
+            "./hungchannels/Syrex - She Doesn't Mind (Nightcore).mp3",
+            "./hungchannels/Syrex - Titanium (Nightcore).mp3",
+            "./hungchannels/Syrex - Without Me (Nightcore).mp3",
+            "./hungchannels/Syrex, MODERN CLVB, Katana Angels, Dayana - On The Floor (Nightcore).mp3",
+            "./hungchannels/Syrex, Nightcore Mage - The Motto (Nightcore).mp3"
+        ];
+
+        let index = Math.floor(Math.random() * HungChannels_List.length);
+        const audio = new Audio(HungChannels_List[index]);
+        function HungChannelsAudio() {
+            audio.play();
+        }
+        audio.loop = true;
     </script>
 
     <script>
